@@ -1,154 +1,76 @@
-# Learning Flutter & Dart — CSE 489 🚀
+# CSE 489 Flutter & Dart Practice
 
-A hands-on Flutter and Dart learning repository created as part of my **CSE 489: Mobile Application Development** course at East West University.
+A small collection of exploratory Flutter UI exercises created while learning the fundamentals of Flutter and Dart for **CSE 489: Mobile Application Development** at East West University.
 
-I'm a MERN Stack developer expanding my skills into Flutter and Dart, learning to build mobile applications through small exercises, practical coding and experimentation.
+This folder is a practice/demo project. It is separate from the structured introductory manual work in `Lab1Mid` and the six widget labs in `Lab1Final`.
 
-The goal is to understand the fundamentals before moving on to complete, production oriented mobile applications.
+## Exercises in main.dart
 
-## 🎯 Learning Goals
+The source file keeps earlier exercises as commented examples and leaves Exercise 05 active.
 
-- Learn Dart syntax, fundamentals and object-oriented programming.
-- Understand Flutter's widget tree and UI composition.
-- Practice layouts, alignment, spacing and styling.
-- Implement buttons, callbacks and user interactions.
-- Understand application state and navigation.
-- Write basic widget tests and develop good debugging habits.
+| Exercise | Concepts practised | Current source status |
+|---|---|---|
+| 01 — Basic text | MaterialApp, Scaffold, Text, text styling | Commented example |
+| 02 — Vertical layout | Center, Column, Icon, SizedBox, spacing | Commented example |
+| 03 — Profile row/card | Row, Column, Card, Padding, CircleAvatar, Expanded | Commented example |
+| 04 — Alignment | mainAxisAlignment, crossAxisAlignment, Container, Row, Column | Commented example |
+| 05 — Button interaction | Builder, ElevatedButton, OutlinedButton, TextButton, callbacks, SnackBar | Active implementation |
 
-## 📚 Completed Exercises
+## Active screen: Exercise 05
 
-| Exercise    | Topics Covered                                                           |
-| ----------- | ------------------------------------------------------------------------ |
-| Exercise 01 | Basic Flutter application structure, `MaterialApp`, `Scaffold` and `Text` |
-| Exercise 02 | `Column`, `Center`, `Icon`, `SizedBox` and `MainAxisSize`                |
-| Exercise 03 | `Row`, `Column`, `CircleAvatar`, `Card`, `Padding` and `Expanded`        |
-| Exercise 04 | `mainAxisAlignment` and `crossAxisAlignment`                             |
-| Exercise 05 | `ElevatedButton`, `OutlinedButton`, `TextButton`, callbacks and `SnackBar` |
+The current UI includes:
+- A heading: “Exercise 05: Button Interaction”.
+- A **Say Hello** ElevatedButton that displays “Hello, Taoshif!” in a SnackBar.
+- A **Show Lesson Message** OutlinedButton that displays “I am learning Flutter!” in a SnackBar.
+- A disabled TextButton for comparison.
 
-**Current progress:** Exercises 01–05 completed. Next, I'll practice `StatefulWidget`, `setState()` and interactive UI updates.
+The code uses a Builder-provided BuildContext to access ScaffoldMessenger from within the body.
 
-Earlier exercises are retained as commented examples in `lib/main.dart` for reference while the latest exercise remains active.
+## Widget test
 
-## 🛠️ Tech Stack
+The project includes a custom widget test in `test/widget_test.dart`. It pumps PracticeApp, checks the Exercise 05 heading and Say Hello button, taps the button, and checks that the expected SnackBar message appears.
 
-- **Language:** Dart
-- **UI Framework:** Flutter
-- **IDE:** Android Studio / Visual Studio Code
-- **Version Control:** Git and GitHub
-- **Testing:** Flutter Widget Tests
+Run the test with:
 
-## 📂 Project Structure
-
-```text
-Learning-Flutter-CSE489/
-├── android/        # Android platform configuration
-├── ios/            # iOS platform configuration
-├── lib/
-│   └── main.dart   # Main application and practice exercises
-├── linux/          # Linux platform configuration
-├── macos/          # macOS platform configuration
-├── test/
-│   └── widget_test.dart
-├── web/            # Web platform configuration
-├── windows/        # Windows platform configuration
-├── .gitignore
-├── pubspec.yaml    # Project configuration and dependencies
-├── pubspec.lock    # Resolved dependency versions
-└── README.md
-```
-
-## ⚙️ Getting Started
-
-### Prerequisites
-
-Install the Flutter SDK and configure an IDE with Flutter and Dart support. For Android testing, configure an Android emulator or connect a compatible device.
-
-Verify your Flutter installation:
-
-```bash
-flutter doctor
-```
-
-### Run the Application
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Taoshif1/Learning-Flutter-CSE489.git
-```
-
-Navigate to the project directory:
-
-```bash
-cd Learning-Flutter-CSE489
-```
-
-Install dependencies:
-
-```bash
-flutter pub get
-```
-
-Run the application:
-
-```bash
-flutter run
-```
-
-### Run Tests
-
-Execute the automated tests with:
-
-```bash
+```powershell
 flutter test
 ```
 
-## 🔄 Development Workflow
+## Run locally
 
-My learning workflow is simple:
+```powershell
+cd cse489_first_app
+flutter pub get
+flutter run
+```
 
-1. Learn a concept.
-2. Write the code myself.
-3. Run the application and experiment.
-4. Understand errors and debug them.
-5. Write or update tests when appropriate.
-6. Commit meaningful changes to GitHub.
+## Project structure
 
-Each exercise builds on the knowledge from previous exercises.
+```text
+cse489_first_app/
+├── README.md
+├── lib/
+│   └── main.dart
+├── test/
+│   └── widget_test.dart
+├── android/      Android host configuration
+├── ios/          iOS host configuration
+├── web/          Web host files
+├── windows/      Windows host files
+├── macos/        macOS host files
+└── pubspec.yaml
+```
 
-## 🗺️ Roadmap
+## Scope and next steps
 
-- [x] Flutter application fundamentals
-- [x] Basic vertical and horizontal layouts
-- [x] Layout alignment and spacing
-- [x] Buttons and callbacks
-- [x] Basic widget testing
-- [ ] `StatefulWidget` and `setState()`
-- [ ] Variables, state, and user input in Flutter
-- [ ] Dart classes, constructors and object-oriented programming practice
-- [ ] Form handling and validation
-- [ ] Navigation between screens
-- [ ] API integration and asynchronous programming
-- [ ] A small end-to-end Flutter practice application
+These exercises focus on basic widget composition, layout, alignment, and callbacks. They are not intended to represent a complete mobile application. The structured projects in `Lab1Final` continue the learning sequence with state, lifecycle, BuildContext, layout, and Material/Cupertino components.
 
-## 📖 Learning Resources
+## Author
 
-- [Official Flutter Documentation](https://docs.flutter.dev/)
-- [Flutter Learning Pathway](https://docs.flutter.dev/get-started/learn-flutter)
-- [Dart Language Documentation](https://dart.dev/language)
-- [Flutter Testing Documentation](https://docs.flutter.dev/testing)
-
-## 👨‍💻 Author
-
-**Gazi Taoshif (Taoshiflex)**
-
-B.Sc. in Computer Science and Engineering student at East West University, Dhaka, Bangladesh.
-
-MERN Stack Developer | Learning Flutter & Dart | Building toward full-stack web and mobile development.
-
-- LinkedIn: [Gazi Taoshif](https://www.linkedin.com/in/taoshif1/)
-- My Agency: [Taoshiflex Studio](https://taoshiflexstudio.me/)
+**Gazi Taoshif**  
+CSE Student | Full Stack Developer  
+East West University
 
 ---
 
-*Learning step by step, building consistently and improving with every commit. 🚀*
+*Practice, experiment, keep the earlier examples, and build on the fundamentals.*
