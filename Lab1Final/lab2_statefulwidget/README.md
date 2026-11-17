@@ -1,17 +1,27 @@
-# lab2_statefulwidget
+# Lab 02 — StatelessWidget, StatefulWidget and setState()
 
-A new Flutter project.
+An interactive counter used to practise state changes in Flutter.
 
-## Getting Started
+## What this project demonstrates
+- A `StatefulWidget` and its associated State class
+- A counter stored in a mutable integer
+- `setState()` to notify Flutter when the counter changes
+- Increment, decrement, and reset actions
+- A guard that prevents the counter from becoming negative
 
-This project is a starting point for a Flutter application.
+The current implementation prints “You reached 10” in the Run console when the counter reaches 10. The lab manual asks for a message to be displayed in the app; a conditional Text widget is still needed to satisfy that visible-message requirement.
 
-A few resources to get you started if this is your first Flutter project:
+## Run
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```powershell
+flutter pub get
+flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Source
+[lib/main.dart](lib/main.dart)
+
+## Test note
+The current `test/widget_test.dart` is an unmodified generated counter test. It imports `MyApp`, while the current source starts with `CounterPage`, and the screen uses Increment rather than the generated plus-icon control. Rewrite the test around CounterPage and its actual buttons.
+
+**Author:** Gazi Taoshif — CSE Student | Full Stack Developer
