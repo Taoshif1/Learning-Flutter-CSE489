@@ -682,3 +682,20 @@ The goal is to strengthen fundamental mobile application development skills thro
 **Small steps, consistent practice, continuous growth.**
 
 *The journey continues.*
+
+
+---
+
+## Project-level guides and widget-test status
+
+Each project folder also has a short README beside its source code:
+
+- [Lab 01 — Widget Tree](lab01_widget_tree/README.md)
+- [Lab 02 — StatefulWidget and setState](lab2_statefulwidget/README.md)
+- [Lab 03 — StatefulWidget Lifecycle](lab3_widget_lifecycle/README.md)
+- [Lab 04 — BuildContext](lab4_buildcontext/README.md)
+- [Lab 05 — Layout Widgets](lab5_layout_widgets/README.md)
+- [Lab 06 — Material and Cupertino](lab6_material_cupertino/README.md)
+
+**Widget-test note:** The six projects still contain generated counter smoke tests. Those tests expect a counter, a plus icon, and a `MyApp` root widget. The current lab implementations do not all expose those elements: Lab 01 is a static widget-tree screen, and Labs 02–06 use their own root widgets. These tests should be rewritten to match each lab before relying on `flutter test`. Their presence is not evidence that they currently pass.
+
