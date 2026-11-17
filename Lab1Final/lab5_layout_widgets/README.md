@@ -1,17 +1,28 @@
-# lab5_layout_widgets
+# Lab 05 — Layout Widgets and Spacing
 
-A new Flutter project.
+A scrollable student profile screen that practises Flutter layout composition.
 
-## Getting Started
+## What this project demonstrates
+- `SingleChildScrollView` for vertical scrolling
+- `Row` and `Column` for arranging content
+- `CircleAvatar` for a profile placeholder
+- `Stack` and `Positioned` for the status indicator overlay
+- `Expanded` for sharing available row width
+- `Padding`, `SizedBox`, `Card`, and a reusable `infoCard()` helper
 
-This project is a starting point for a Flutter application.
+The page contains profile, academic, contact, and additional-information sections. It is intended to be tested by scrolling on a narrow emulator screen.
 
-A few resources to get you started if this is your first Flutter project:
+## Run
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```powershell
+flutter pub get
+flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Source
+[lib/main.dart](lib/main.dart)
+
+## Test note
+The current `test/widget_test.dart` is still the generated counter smoke test and does not match the StudentProfilePage UI. Replace it with tests for visible profile content and scrolling if automated test coverage is required.
+
+**Author:** Gazi Taoshif — CSE Student | Full Stack Developer
