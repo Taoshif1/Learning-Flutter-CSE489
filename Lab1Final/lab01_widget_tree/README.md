@@ -1,17 +1,28 @@
-# lab01_widget_tree
+# Lab 01 — Building Your First Widget Tree
 
-A new Flutter project.
+A basic Flutter application for learning how widgets are composed into a screen.
 
-## Getting Started
+## What this project demonstrates
+- `main()` and `runApp()`
+- `StatelessWidget` and a root app widget
+- `MaterialApp`, `Scaffold`, and `AppBar`
+- `Center` and `Column` for layout
+- `Text`, `SizedBox`, and `Icon`
+- Parent-child relationships in a widget tree
 
-This project is a starting point for a Flutter application.
+The active screen displays two text messages and a widgets icon. The source also keeps the earlier one-text starter example as a commented reference.
 
-A few resources to get you started if this is your first Flutter project:
+## Run
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```powershell
+flutter pub get
+flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Source
+[lib/main.dart](lib/main.dart)
+
+## Test note
+The current `test/widget_test.dart` is the generated counter smoke test. It expects a counter and plus icon that are not part of this lab screen. Update the test to assert the actual text and icon before using it as verification.
+
+**Author:** Gazi Taoshif — CSE Student | Full Stack Developer
