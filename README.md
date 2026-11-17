@@ -4,7 +4,7 @@ A learning repository documenting my progress with **Dart and Flutter** while st
 
 This repository keeps my early demos, a small interactive student-profile exercise, the introductory Dart/Flutter lab work, and the later six-part Flutter widget lab series in one place. Each substantial exercise is kept in its own folder so it can be opened and run independently.
 
-> The goal of this repository is to show the learning process clearly: start with small examples, understand the language fundamentals, practise UI composition, and gradually work with state and interaction.
+> The goal is to show the learning process clearly: start with small examples, understand language fundamentals, practise UI composition, and gradually work with state and interaction.
 
 ## Author
 
@@ -13,13 +13,11 @@ This repository keeps my early demos, a small interactive student-profile exerci
 East West University
 
 - GitHub: [Taoshif1](https://github.com/Taoshif1)
-- Repository: [Learning-Flutter-CSE489](https://github.com/Taoshif1/Learning-Flutter-CSE489)
+- Repository: [Learning-Flutter-CSE489](https://github.com/Taoshif1/Learning-flutter-CSE489)
 
 ---
 
 ## Repository overview
-
-The repository is organized into five learning areas:
 
 | Folder | Role | What it contains |
 |---|---|---|
@@ -31,7 +29,7 @@ The repository is organized into five learning areas:
 
 ## Full project tree
 
-The tree below shows the learning projects and their main source/documentation files. Generated platform files and build output are intentionally collapsed.
+The tree below shows the learning projects, source entry points, tests, and documentation. Generated platform files and build output are intentionally collapsed.
 
 ```text
 Learning-Flutter-CSE489/
@@ -39,70 +37,63 @@ Learning-Flutter-CSE489/
 │
 ├── first_flutter_app/
 │   ├── README.md
-│   ├── lib/
-│   │   └── main.dart
-│   ├── test/
-│   │   └── widget_test.dart
+│   ├── lib/main.dart
+│   ├── test/widget_test.dart
 │   └── pubspec.yaml
 │
 ├── cse489_first_app/
 │   ├── README.md
-│   ├── lib/
-│   │   └── main.dart
-│   ├── test/
-│   │   └── widget_test.dart
+│   ├── lib/main.dart
+│   ├── test/widget_test.dart
 │   └── pubspec.yaml
 │
 ├── student_profile_app/
 │   ├── README.md
-│   ├── lib/
-│   │   └── main.dart
-│   ├── test/
-│   │   └── widget_test.dart
+│   ├── lib/main.dart
+│   ├── test/widget_test.dart
 │   └── pubspec.yaml
 │
 ├── Lab1Mid/
 │   ├── README.md
-│   ├── dart_lab01/
-│   │   ├── README.md
-│   │   └── bin/task1.dart
-│   ├── dart_lab02/
-│   │   ├── README.md
-│   │   └── bin/dart_lab02.dart
-│   ├── dart_lab03/
-│   │   ├── README.md
-│   │   └── bin/dart_lab03.dart
-│   ├── dart_lab04/
-│   │   ├── README.md
-│   │   └── bin/dart_lab04.dart
-│   ├── dart_lab05/
-│   │   ├── README.md
-│   │   └── bin/dart_lab05.dart
-│   ├── dart_lab06/
-│   │   ├── README.md
-│   │   └── bin/dart_lab06.dart
+│   ├── dart_lab01/README.md + bin/task1.dart
+│   ├── dart_lab02/README.md + bin/dart_lab02.dart
+│   ├── dart_lab03/README.md + bin/dart_lab03.dart
+│   ├── dart_lab04/README.md + bin/dart_lab04.dart
+│   ├── dart_lab05/README.md + bin/dart_lab05.dart
+│   ├── dart_lab06/README.md + bin/dart_lab06.dart
 │   └── hello_flutter_lab7/
 │       ├── README.md
-│       ├── lib/main.dart
-│       └── pubspec.yaml
+│       └── lib/main.dart
 │
 └── Lab1Final/
     ├── README.md
     ├── lab01_widget_tree/
-    │   └── lib/main.dart
+    │   ├── README.md
+    │   ├── lib/main.dart
+    │   └── test/widget_test.dart
     ├── lab2_statefulwidget/
-    │   └── lib/main.dart
+    │   ├── README.md
+    │   ├── lib/main.dart
+    │   └── test/widget_test.dart
     ├── lab3_widget_lifecycle/
-    │   └── lib/main.dart
+    │   ├── README.md
+    │   ├── lib/main.dart
+    │   └── test/widget_test.dart
     ├── lab4_buildcontext/
-    │   └── lib/main.dart
+    │   ├── README.md
+    │   ├── lib/main.dart
+    │   └── test/widget_test.dart
     ├── lab5_layout_widgets/
-    │   └── lib/main.dart
+    │   ├── README.md
+    │   ├── lib/main.dart
+    │   └── test/widget_test.dart
     └── lab6_material_cupertino/
-        └── lib/main.dart
+        ├── README.md
+        ├── lib/main.dart
+        └── test/widget_test.dart
 ```
 
-Each Flutter project also contains its own platform folders, dependency metadata, and generated configuration. Those standard files are omitted above to keep the tree readable.
+Each Flutter project also contains its standard platform folders and configuration files. Those generated files are omitted from this overview.
 
 ---
 
@@ -110,7 +101,7 @@ Each Flutter project also contains its own platform folders, dependency metadata
 
 ### 1. First Flutter demo — `first_flutter_app`
 
-A minimal screen used to confirm the Flutter toolchain and understand the basic app structure.
+A minimal screen used to confirm the Flutter setup and understand the basic app structure.
 
 **Practised:** `main()`, `runApp()`, StatelessWidget, MaterialApp, Scaffold, AppBar, Center, and Text.
 
@@ -134,7 +125,7 @@ A small interactive student profile task completed before the structured Lab1Fin
 
 ### 4. Introductory lab — `Lab1Mid`
 
-Based on the CSE 489 introductory lab manual *Dart Fundamentals in Android Studio • First Flutter Project*.
+Based on the supplied CSE 489 manual *Dart Fundamentals in Android Studio • First Flutter Project*.
 
 It contains seven tasks:
 1. Android Studio and Dart warm-up.
@@ -145,7 +136,7 @@ It contains seven tasks:
 6. Exception handling.
 7. First Flutter project.
 
-The folder-level README includes the task summaries, the manual's report questions with answers, run commands, and notes about which examples are active or commented in the committed code.
+The folder-level README includes task summaries, the manual's report questions with answers, run commands, and notes about which examples are active or commented in the committed code.
 
 [Open Lab1Mid README](Lab1Mid/README.md)
 
@@ -164,6 +155,8 @@ A six-project sequence that builds practical understanding of Flutter's widget s
 
 [Open Lab1Final README](Lab1Final/README.md)
 
+Each lab also has its own README beside its source code, describing that project's objective, implementation, and run command.
+
 ---
 
 ## Tech stack and tools
@@ -174,7 +167,7 @@ A six-project sequence that builds practical understanding of Flutter's widget s
 - **Testing and execution:** Flutter CLI, Dart CLI, Android Emulator
 - **Version control:** Git and GitHub
 
-The Flutter projects use the standard Flutter project structure, with application code under `lib/` and dependencies/configuration in `pubspec.yaml`. The Dart console exercises use source files under each task project's `bin/` directory.
+The Flutter projects keep application code under `lib/` and dependencies/configuration in `pubspec.yaml`. The Dart console exercises keep source files under each task project's `bin/` directory.
 
 ## Environment setup
 
@@ -189,7 +182,7 @@ dart --version
 flutter --version
 ```
 
-The introductory manual also notes that console input requires an interactive terminal that accepts stdin.
+The introductory manual notes that console input requires an interactive terminal that accepts stdin.
 
 ## Run a project
 
@@ -223,18 +216,19 @@ For the six Lab1Final projects, use the individual project folders documented in
 
 ## Testing notes
 
-Some projects contain starter widget tests that were generated when the projects were created.
+Some projects contain generated widget tests that have not yet been adapted to their current screens.
 
-- `cse489_first_app/test/widget_test.dart` is customized for the active Exercise 05 screen and checks the greeting SnackBar interaction.
-- `first_flutter_app/test/widget_test.dart` is still the default counter test, but the current app is a static greeting screen. The test should be updated to match the app before relying on it.
-- `student_profile_app/test/widget_test.dart` is also the default counter test, while the current app is a student profile screen. The test should be updated to match the app before relying on it.
-- The Lab1Mid Dart console projects are intended to be run from an interactive terminal for the input-based exercises.
+- `cse489_first_app/test/widget_test.dart` is customized for the active Exercise 05 screen. It checks the heading, taps the Say Hello button, and looks for the expected SnackBar message. This documents the test's intent; it does not claim the test was run here.
+- `first_flutter_app/test/widget_test.dart` is still the generated counter increment test, but the current app is a static greeting screen.
+- `student_profile_app/test/widget_test.dart` is also the generated counter test, while the current app is a student profile screen.
+- All six `Lab1Final` projects still contain generated counter smoke tests. They do not match the current lab implementations: Lab 01 has no counter or plus button, and Labs 02–06 do not expose the generated test's expected `MyApp` root class. Rewrite these tests to match each lab before relying on `flutter test`.
+- The Lab1Mid Dart console tasks should be run from an interactive terminal for the input-based exercises.
 
-The presence of a test file does not mean that the test has been run or that it currently passes.
+The presence of a test file does not mean that it has been run or that it currently passes.
 
 ## Current scope
 
-This repository documents foundational practice and coursework exercises. It does not represent a single integrated production application. The projects do not currently form one combined app and the introductory examples do not include a backend, database, authentication service, or API integration unless a specific project is later extended to include them.
+This repository documents foundational practice and coursework exercises. It is not one combined production application. The introductory examples do not include a backend, database, authentication service, or API integration.
 
 The integrated Student Academic Dashboard described in the Lab1Final manual is a separate next exercise; it should be added as its own project when implemented.
 
