@@ -1,17 +1,30 @@
-# hello_flutter_lab7
+# Task 07 — Your First Flutter Project
 
-A new Flutter project.
+A minimal Flutter application created for the final task in the CSE 489 introductory Dart and Flutter lab manual.
 
-## Getting Started
+## What the app shows
+The screen uses a Material application with:
+- `MaterialApp` as the application root
+- `Scaffold` as the page structure
+- `AppBar` with the title “My First Flutter App”
+- `Center` to position the body content
+- `Text` to show the author's name, course code, and a learning message
 
-This project is a starting point for a Flutter application.
+The current screen displays:
+- Gazi Taoshif (Taoshiflex)
+- CSE 489
+- Learning Dart and Flutter!
 
-A few resources to get you started if this is your first Flutter project:
+## Run
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```powershell
+flutter pub get
+flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Source
+[lib/main.dart](lib/main.dart)
+
+For the Task 07 requirements and lab report questions, see the [Lab1Mid overview](../README.md#task-07--your-first-flutter-project).
+
+**Author:** Gazi Taoshif — CSE Student | Full Stack Developer
