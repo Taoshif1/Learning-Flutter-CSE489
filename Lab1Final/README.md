@@ -29,7 +29,7 @@ The labs are organized as separate Flutter projects so each exercise can be open
 
 ## Repository Structure
 
-\`\`\`text
+```text
 Lab1Final/
 ├── lab01_widget_tree/
 │   └── lib/
@@ -49,18 +49,18 @@ Lab1Final/
 └── lab6_material_cupertino/
     └── lib/
         └── main.dart
-\`\`\`
+```
 
-Each folder is an independent Flutter project. The main Dart implementation for each lab is located at its respective \`lib/main.dart\` path.
+Each folder is an independent Flutter project. The main Dart implementation for each lab is located at its respective `lib/main.dart` path.
 
 | Lab | Project folder | Main source file |
 |---|---|---|
-| 01 | \`lab01_widget_tree\` | [main.dart](lab01_widget_tree/lib/main.dart) |
-| 02 | \`lab2_statefulwidget\` | [main.dart](lab2_statefulwidget/lib/main.dart) |
-| 03 | \`lab3_widget_lifecycle\` | [main.dart](lab3_widget_lifecycle/lib/main.dart) |
-| 04 | \`lab4_buildcontext\` | [main.dart](lab4_buildcontext/lib/main.dart) |
-| 05 | \`lab5_layout_widgets\` | [main.dart](lab5_layout_widgets/lib/main.dart) |
-| 06 | \`lab6_material_cupertino\` | [main.dart](lab6_material_cupertino/lib/main.dart) |
+| 01 | `lab01_widget_tree` | [main.dart](lab01_widget_tree/lib/main.dart) |
+| 02 | `lab2_statefulwidget` | [main.dart](lab2_statefulwidget/lib/main.dart) |
+| 03 | `lab3_widget_lifecycle` | [main.dart](lab3_widget_lifecycle/lib/main.dart) |
+| 04 | `lab4_buildcontext` | [main.dart](lab4_buildcontext/lib/main.dart) |
+| 05 | `lab5_layout_widgets` | [main.dart](lab5_layout_widgets/lib/main.dart) |
+| 06 | `lab6_material_cupertino` | [main.dart](lab6_material_cupertino/lib/main.dart) |
 
 ---
 
@@ -78,9 +78,9 @@ Before running a project, make sure Flutter and the Android development environm
 
 Check the installation:
 
-\`\`\`powershell
+```powershell
 flutter doctor
-\`\`\`
+```
 
 Resolve any required setup issues reported by Flutter before starting the lab.
 
@@ -94,19 +94,19 @@ Resolve any required setup issues reported by Flutter before starting the lab.
 
 Example for Lab 01:
 
-\`\`\`powershell
+```powershell
 cd Lab1Final\lab01_widget_tree
 flutter pub get
 flutter run
-\`\`\`
+```
 
 For another lab, replace the folder name. For example:
 
-\`\`\`powershell
+```powershell
 cd Lab1Final\lab4_buildcontext
 flutter pub get
 flutter run
-\`\`\`
+```
 
 You can also open an individual project folder directly in Android Studio and run it using the IDE.
 
@@ -127,18 +127,18 @@ Create a basic Flutter application and understand how widgets are composed into 
 
 ### Implementation
 
-The application uses a \`StatelessWidget\` as its root. Its interface is composed with:
+The application uses a `StatelessWidget` as its root. Its interface is composed with:
 
-- \`MaterialApp\` as the application-level widget.
-- \`Scaffold\` as the page structure.
-- \`AppBar\` for the top application bar.
-- \`Center\` to position the body content.
-- \`Column\` to arrange the children vertically.
-- \`Text\`, \`SizedBox\`, and \`Icon\` for the visible content and spacing.
+- `MaterialApp` as the application-level widget.
+- `Scaffold` as the page structure.
+- `AppBar` for the top application bar.
+- `Center` to position the body content.
+- `Column` to arrange the children vertically.
+- `Text`, `SizedBox`, and `Icon` for the visible content and spacing.
 
 ### Widget Tree
 
-\`\`\`text
+```text
 runApp()
 └── MyApp
     └── MaterialApp
@@ -152,7 +152,7 @@ runApp()
                     ├── Text("Welcome to Lab1!")
                     ├── SizedBox(height: 15)
                     └── Icon(Icons.widgets)
-\`\`\`
+```
 
 ### Key Learning
 
@@ -200,13 +200,13 @@ Compare stateless and stateful widgets and build an interactive counter.
 
 The counter is stored as an integer in the State class:
 
-\`\`\`dart
+```dart
 int count = 0;
-\`\`\`
+```
 
 The increment operation updates the value inside setState():
 
-\`\`\`dart
+```dart
 void increment() {
   setState(() {
     count++;
@@ -215,7 +215,7 @@ void increment() {
     }
   });
 }
-\`\`\`
+```
 
 The decrement method checks the current value before reducing it. The reset method assigns zero to the counter.
 
@@ -230,12 +230,12 @@ Calling setState() does not directly paint pixels. It marks the State object as 
 
 ### Implementation Note
 
-In the current committed implementation, the message \`You reached 10\` is printed to the Run console when the count becomes 10. The lab manual asks for a message to be displayed when the counter reaches 10. To meet that requirement visibly in the app, a conditional Text widget can be added to the Column, for example:
+In the current committed implementation, the message `You reached 10` is printed to the Run console when the count becomes 10. The lab manual asks for a message to be displayed when the counter reaches 10. To meet that requirement visibly in the app, a conditional Text widget can be added to the Column, for example:
 
-\`\`\`dart
+```dart
 if (count >= 10)
   const Text('You reached 10!');
-\`\`\`
+```
 
 This is a documented improvement to the current implementation, not a change to the committed source file.
 
@@ -281,21 +281,21 @@ Observe the major lifecycle methods of a StatefulWidget and understand when they
 
 | Method | Purpose |
 |---|---|
-| \`initState()\` | Called once when the State object is inserted into the tree. Used for one-time initialization. |
-| \`didChangeDependencies()\` | Called after initState() and when an inherited dependency used by the State changes. |
-| \`didUpdateWidget(oldWidget)\` | Called when the parent supplies a new configuration of the same widget type and key. |
-| \`build(context)\` | Describes the widget subtree and may execute multiple times. |
-| \`dispose()\` | Called when the State object is permanently removed; used to release owned resources. |
+| `initState()` | Called once when the State object is inserted into the tree. Used for one-time initialization. |
+| `didChangeDependencies()` | Called after initState() and when an inherited dependency used by the State changes. |
+| `didUpdateWidget(oldWidget)` | Called when the parent supplies a new configuration of the same widget type and key. |
+| `build(context)` | Describes the widget subtree and may execute multiple times. |
+| `dispose()` | Called when the State object is permanently removed; used to release owned resources. |
 
 ### Expected Lifecycle Observation
 
 On the first screen load, the expected order is:
 
-\`\`\`text
+```text
 initState called
 didChangeDependencies called
 build called
-\`\`\`
+```
 
 When the Rebuild button is pressed, setState() updates the counter and build() executes again.
 
@@ -305,9 +305,9 @@ The original lab starter does not change the widget configuration from a parent,
 
 The committed implementation includes a Navigate Away button and a FinishedPage. The button uses Navigator.pushReplacement() to replace the current route. When the old page is permanently removed, the console can show:
 
-\`\`\`text
+```text
 dispose called
-\`\`\`
+```
 
 This addition was used to demonstrate disposal because pressing the Android system Back button while the demo is the root screen exits the application. App termination is not a reliable way to observe dispose().
 
@@ -315,7 +315,7 @@ This addition was used to demonstrate disposal because pressing the Android syst
 
 A TextEditingController should be disposed when the State object that owns it is permanently removed:
 
-\`\`\`dart
+```dart
 late final TextEditingController nameController;
 
 @override
@@ -329,7 +329,7 @@ void dispose() {
   nameController.dispose();
   super.dispose();
 }
-\`\`\`
+```
 
 Disposing the controller releases its resources and listeners when it is no longer needed. The same cleanup principle applies to an AnimationController.
 
@@ -389,14 +389,14 @@ The lab uses Builder to obtain a context below the Scaffold. This matters becaus
 
 The two buttons display different SnackBar messages using ScaffoldMessenger:
 
-- \`Welcome to Lab 04!\`
-- \`Hello from the Second Button!\`
+- `Welcome to Lab 04!`
+- `Hello from the Second Button!`
 
 Both SnackBars use a three-second duration.
 
 ### Widget Tree
 
-\`\`\`text
+```text
 runApp()
 └── MaterialApp
     └── ContextDemo
@@ -411,7 +411,7 @@ runApp()
                         ├── SizedBox
                         └── ElevatedButton
                             └── Text("Show Second SnackBar")
-\`\`\`
+```
 
 ### Viva Questions and Answers
 
@@ -459,16 +459,16 @@ Compose a structured screen using common Flutter layout widgets.
 
 | Widget | Purpose |
 |---|---|
-| \`Row\` | Arranges children horizontally. |
-| \`Column\` | Arranges children vertically. |
-| \`Padding\` | Adds space around a child. |
-| \`SizedBox\` | Creates fixed-size space or constrains a child to a specific size. |
-| \`Expanded\` | Allocates available main-axis space inside a Flex layout. |
-| \`SingleChildScrollView\` | Makes content scrollable when it exceeds the viewport. |
-| \`Stack\` | Places widgets on top of one another. |
-| \`Positioned\` | Controls the placement of a child inside a Stack. |
-| \`CircleAvatar\` | Displays a circular profile image or placeholder. |
-| \`Card\` | Groups related information. |
+| `Row` | Arranges children horizontally. |
+| `Column` | Arranges children vertically. |
+| `Padding` | Adds space around a child. |
+| `SizedBox` | Creates fixed-size space or constrains a child to a specific size. |
+| `Expanded` | Allocates available main-axis space inside a Flex layout. |
+| `SingleChildScrollView` | Makes content scrollable when it exceeds the viewport. |
+| `Stack` | Places widgets on top of one another. |
+| `Positioned` | Controls the placement of a child inside a Stack. |
+| `CircleAvatar` | Displays a circular profile image or placeholder. |
+| `Card` | Groups related information. |
 
 ### Implementation
 
@@ -607,10 +607,10 @@ The six exercises build on one another:
 
 A message such as:
 
-\`\`\`text
+```text
 I/Choreographer: Skipped frames!
 The application may be doing too much work on its main thread.
-\`\`\`
+```
 
 is an Android frame-performance warning. It is not, by itself, proof of a Dart compilation error. Check whether the Flutter build succeeded and whether the application actually appears in the emulator.
 
@@ -664,12 +664,12 @@ The course laboratory manual also includes an integrated **Student Academic Dash
 
 | Lab | Topic | Project |
 |---|---|---|
-| 01 | Building Your First Widget Tree | \`lab01_widget_tree\` |
-| 02 | StatelessWidget, StatefulWidget and setState() | \`lab2_statefulwidget\` |
-| 03 | Exploring the StatefulWidget Lifecycle | \`lab3_widget_lifecycle\` |
-| 04 | Widget Tree, Element Tree and BuildContext | \`lab4_buildcontext\` |
-| 05 | Layout Widgets and Spacing | \`lab5_layout_widgets\` |
-| 06 | Material and Cupertino Interface Components | \`lab6_material_cupertino\` |
+| 01 | Building Your First Widget Tree | `lab01_widget_tree` |
+| 02 | StatelessWidget, StatefulWidget and setState() | `lab2_statefulwidget` |
+| 03 | Exploring the StatefulWidget Lifecycle | `lab3_widget_lifecycle` |
+| 04 | Widget Tree, Element Tree and BuildContext | `lab4_buildcontext` |
+| 05 | Layout Widgets and Spacing | `lab5_layout_widgets` |
+| 06 | Material and Cupertino Interface Components | `lab6_material_cupertino` |
 
 ---
 
