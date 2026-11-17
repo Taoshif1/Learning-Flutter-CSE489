@@ -699,3 +699,14 @@ Each project folder also has a short README beside its source code:
 
 **Widget-test note:** The six projects still contain generated counter smoke tests. Those tests expect a counter, a plus icon, and a `MyApp` root widget. The current lab implementations do not all expose those elements: Lab 01 is a static widget-tree screen, and Labs 02–06 use their own root widgets. These tests should be rewritten to match each lab before relying on `flutter test`. Their presence is not evidence that they currently pass.
 
+
+
+---
+
+## Author
+
+**Gazi Taoshif**  
+CSE Student | Full Stack Developer  
+East West University
+
+GitHub: [@Taoshif1](https://github.com/Taoshif1)
